@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Virtual Voice Assistant</title>
+  <link rel="shortcut icon" href="logo.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Logo and Title -->
+  <img src="logo4.jpg" alt="logo" id="logo">
+  <h1>I'm <span id="name">Genos</span>, Your <span id="va">Virtual Assistant</span></h1>
+
+  <!-- Voice Activity Animation -->
+  <img src="voice.gif" alt="voice" id="voice">
+
+  <!-- Mic Button -->
+  <button id="btn">
+    <img src="mic.svg" alt="mic">
+    <span id="content">Click here to talk to me</span>
+  </button>
+
+  <!-- Live Camera Feed -->
+  <video id="camera" autoplay playsinline style="
+    display: none;
+    width: 320px;
+    height: 240px;
+    border: 2px solid white;
+    margin-top: 20px;
+  "></video>
+
+  <!-- Captured Snapshot -->
+  <canvas id="snapshot" style="
+    display: none;
+    width: 320px;
+    height: 240px;
+    border: 2px solid white;
+    margin-top: 20px;
+  "></canvas>
+
+  <!-- Download Button -->
+  <a id="downloadBtn" style="
+    display: none;
+    margin-top: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+  " download="photo.png">Download Photo</a>
+
+  <!-- Display recognized text -->
+  <h2 id="content">...</h2>
+
+  <!-- External libraries for math solving -->
+  <script src="https://cdn.jsdelivr.net/npm/nerdamer@latest/nerdamer.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/nerdamer@latest/Algebra.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/nerdamer@latest/Calculus.min.js"></script>
+
+  <!-- Our script -->
+  <script src="script.js"></script>
+</body>
+</html>
